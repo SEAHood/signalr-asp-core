@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRAspCore", "SignalRAspCore\SignalRAspCore.csproj", "{F452C672-20CA-4916-AA3A-4CF9C32C95F9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRAspCore", "SignalRAspCore\SignalRAspCore.csproj", "{233D46E3-6C44-4375-BA3D-962A044CDC65}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F452C672-20CA-4916-AA3A-4CF9C32C95F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F452C672-20CA-4916-AA3A-4CF9C32C95F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F452C672-20CA-4916-AA3A-4CF9C32C95F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F452C672-20CA-4916-AA3A-4CF9C32C95F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{233D46E3-6C44-4375-BA3D-962A044CDC65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{233D46E3-6C44-4375-BA3D-962A044CDC65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{233D46E3-6C44-4375-BA3D-962A044CDC65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{233D46E3-6C44-4375-BA3D-962A044CDC65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {EF9734FA-01B6-4813-9587-EE60411B4602}
+		SolutionGuid = {614606D7-0AA8-47B5-848D-09420BD9E1E3}
 	EndGlobalSection
 EndGlobal
