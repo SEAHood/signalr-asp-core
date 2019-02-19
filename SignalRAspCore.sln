@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRAspCore", "SignalRAspCore\SignalRAspCore.csproj", "{233D46E3-6C44-4375-BA3D-962A044CDC65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRAspCore.WebApp", "SignalRAspCore.WebApp\SignalRAspCore.WebApp.csproj", "{233D46E3-6C44-4375-BA3D-962A044CDC65}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRAspCore.Hub", "SignalRAspCore.Hub\SignalRAspCore.Hub.csproj", "{18BD2650-B51C-4C52-8E52-44011F422FB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{233D46E3-6C44-4375-BA3D-962A044CDC65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{233D46E3-6C44-4375-BA3D-962A044CDC65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{233D46E3-6C44-4375-BA3D-962A044CDC65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18BD2650-B51C-4C52-8E52-44011F422FB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18BD2650-B51C-4C52-8E52-44011F422FB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18BD2650-B51C-4C52-8E52-44011F422FB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18BD2650-B51C-4C52-8E52-44011F422FB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

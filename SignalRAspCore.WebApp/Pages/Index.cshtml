@@ -1,0 +1,77 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "SignalR IO";
+}
+
+<script src="~/lib/signalr/dist/browser/signalr.min.js"></script>
+<script>
+    function pad(num, size) {
+        var s = num + "";
+        while (s.length < size) s = "0" + s;
+        return s;
+    }
+
+    var connection = new signalR.HubConnectionBuilder().withUrl("/hub").build();
+
+    connection.on("ServerMessage", function (message) {
+        var dt = new Date();
+        var tDisplay = `[${pad(dt.getHours(), 2)}:${pad(dt.getMinutes(), 2)}:${pad(dt.getSeconds(), 2)}]`;
+        $('#output').append(`<li>${tDisplay} ${message}</li>`);
+        $('#output').scrollTop($('#output')[0].scrollHeight);
+    });
+
+    connection.start().catch(function (err) {
+        return console.error(err.toString());
+    });
+
+    $(document).ready(function () {
+        $('#send-message').on('click', () => {
+            connection.invoke("ClientMessage", "Test message").catch(function (err) {
+                return console.error(err.toString());
+            });
+        });
+
+        $('.group-checkbox').on('change', function () {
+            console.log($(this).val());
+            if ($(this).is(":checked")) {
+                connection.invoke("SubscribeToGroup", $(this).val()).catch(function (err) {
+                    return console.error(err.toString());
+                });
+            } else {
+                connection.invoke("UnsubscribeFromGroup", $(this).val()).catch(function (err) {
+                    return console.error(err.toString());
+                });
+            }
+        });
+    });
+</script>
+
+<h2>Basic SignalR Core IO</h2>
+<div id="wrapper">
+    <div id="control-panel" class="page-panel">
+        <span class="control-title">Subscribe to groups:</span>
+        <div id="groups">
+            <div>
+                <input type="checkbox" id="group1" class="group-checkbox" value="1">
+                <label for="group1">Group 1</label>
+            </div>
+            <div>
+                <input type="checkbox" id="group2" class="group-checkbox" value="2">
+                <label for="group2">Group 2</label>
+            </div>
+            <div>
+                <input type="checkbox" id="group3" class="group-checkbox" value="3">
+                <label for="group3">Group 3</label>
+            </div>
+        </div>
+        <hr />
+        <span class="control-title">Send arbitrary message:</span>
+        <a id="send-message" class="btn btn-default">
+            Send Message
+        </a>
+    </div>
+    <div id="output-panel" class="page-panel">
+        <ul id="output"></ul>
+    </div>
+</div>
